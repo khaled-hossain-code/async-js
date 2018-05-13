@@ -2,15 +2,21 @@ const async = require('async');
 const stack = [];
 
 const func1 = (cb) => {
-  cb(null, 'func1');
+  setTimeout(() => {
+    cb(null, 'func1');
+  }, 300);
 };
 
 const func2 = (cb) => {
-  cb(null, 'func2');
+  setTimeout(() => {
+    cb(null, 'func2');
+  }, 200);
 };
 
 const func3 = (cb) => {
-  cb(null, 'func3');
+  setTimeout(() => {
+    cb(null, 'func3');
+  }, 100);
 };
 
 stack.push(func1);
